@@ -69,6 +69,40 @@ class trade{
     var $currency_type;
     var $amount;
     var $price;
+    var $terms;
+    var $type;
+
+    /**
+     * @return mixed
+     */
+    public function getTerms()
+    {
+        return $this->terms;
+    }
+
+    /**
+     * @param mixed $terms
+     */
+    public function setTerms($terms)
+    {
+        $this->terms = $terms;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
 
     /**
      * @return mixed

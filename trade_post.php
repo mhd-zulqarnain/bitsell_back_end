@@ -18,7 +18,7 @@ $type = $data['type'];
 $response ="error";
 
 $sql = "insert into trade(uid,bid,u_limit,d_limit,dead_line,currency_type,amount,price,terms,type)
-                            VALUES ('$uid','$bid','$u_limit','$d_limit','$dead_line','$currency_type','$amount',$price,$terms,$type)";
+                            VALUES ('$uid','$bid','$u_limit','$d_limit','$dead_line','$currency_type','$amount','$price','$terms','$type')";
 $run = mysqli_query($con, $sql);
 //mysqli_query($con, $sql) or die(mysqli_error($con));
 
@@ -27,7 +27,7 @@ if ($run) {
     $response = json_encode(array('status' => "success"));
 
 } else {
-    $response="failed";
+    $response=json_encode(array('status' => "failed"));
 }
 echo $response
 ?>

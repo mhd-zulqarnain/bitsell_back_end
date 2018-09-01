@@ -13,7 +13,7 @@ while ($row = mysqli_fetch_array($res)) {
     /*    $user = new users($row['user_name'],$row['password']);
         array_push($list , $user);*/
     $user = new users();
-    $user->setUsername($row['user_email']);
+    $user->setPassword($row['user_email']);
     $user->setPassword($row['password']);
     array_push($list , $user);
 
